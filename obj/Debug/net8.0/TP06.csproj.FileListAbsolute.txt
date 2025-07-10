@@ -1,0 +1,8 @@
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.GeneratedMSBuildEditorConfig.editorconfig
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.AssemblyInfoInputs.cache
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.AssemblyInfo.cs
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.csproj.CoreCompileInputs.cache
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.MvcApplicationPartsAssemblyInfo.cache
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.RazorAssemblyInfo.cache
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.RazorAssemblyInfo.cs
+Z:\2025\PROG\TP06\obj\Debug\net8.0\TP06.sourcelink.json

@@ -19334,6 +19334,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "z:\\2025\\PROG\\TP06\\Views\\Home\\DatoInteres.cshtml",
+      "TargetPath": "Views\\Home\\DatoInteres.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "z:\\2025\\PROG\\TP06\\Views\\Home\\DatoFamiliar.cshtml",
+      "TargetPath": "Views\\Home\\DatoFamiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "z:\\2025\\PROG\\TP06\\Views\\Home\\Alumno.cshtml",
+      "TargetPath": "Views\\Home\\Alumno.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "z:\\2025\\PROG\\TP06\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

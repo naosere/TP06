@@ -1,8 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Index";
-}
+﻿<h1>BIENVENIDOS AL HIMALAYA</h1>
+    <form action='@Url.Action("Loguear","Home")' method="post">
+        <input type="text" name="fake-field" style="display:none">
+    Nombre:     <input type="text" name="codigo" id="codigo" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+    <input type="submit" value = "Enviar">
+    </form>
 
-<div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
-</div>
+

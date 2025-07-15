@@ -1,8 +1,9 @@
 ﻿<h1>BIENVENIDOS AL HIMALAYA</h1>
     <form action='@Url.Action("Loguear","Home")' method="post">
-        <input type="text" name="fake-field" style="display:none">
-    Nombre:     <input type="text" name="codigo" id="codigo" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+    Correo electronico: <input type="text" value = "email">
+    Contraseña: <input type="text" value= "contraseña">
     <input type="submit" value = "Enviar">
     </form>
+        <h3>@ViewBag.MensajeError</h3>
 
-
+        Apellido: @ViewBag.apellido

@@ -1,22 +1,29 @@
+using Newtonsoft.Json;
 namespace TP06.Models;
 
 public class DatoFamiliar
 {
-    public int Id{ get; private set; }
-    public int IdUsuario { get; private set; }
-    public string Nombre { get; private set; }
-    public string Apellido{ get; private set; }
-    public string Parentesco{ get; private set; }
-    public string Descripción{ get; private set; }
+    [JsonProperty]
+    public int IDDatoFamiliar{ get; private set; }
+    [JsonProperty]
+    public int IDUsuario { get; private set; }
+    [JsonProperty]
+    public string nombre { get; private set; }
+    [JsonProperty]
+    public string apellido{ get; private set; }
+    [JsonProperty]
+    public string parentesco{ get; private set; }
+    [JsonProperty]
+    public string descripcion{ get; private set; }
 
 
-    public DatoFamiliar(int Id, int IdUsuario, string Nombre, string Apellido, string Parentesco, string Descripción){
-        this.Id = Id;
-        this.IdUsuario = IdUsuario;
-        this.Nombre = Nombre;
-        this.Apellido = Apellido;
-        this.Parentesco = Parentesco;
-        this.Descripción = Descripción;
+    public DatoFamiliar(int IDDatoFamiliar, int IDUsuario, string nombre, string apellido, string parentesco, string descripcion){
+        this.IDDatoFamiliar = IDDatoFamiliar;
+        this.IDUsuario = IDUsuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.parentesco = parentesco;
+        this.descripcion = descripcion;
     }
 
     public DatoFamiliar(){

@@ -1,16 +1,17 @@
-namespace TP06.Models;
 using  Microsoft.Data.SqlClient;
 using Dapper;
+namespace TP06.Models;
+
 
 public static class BD
 {
 
-    private static string connectionString = "Server=LocalHost;Database=mibd;Trusted_Connection=True;";
+    private static string connectionString = "Server=LocalHost;Database=TP06_Presentacion;TrustServerCertificate=True;Integrated Security=True;";
 
     public static int Login(string email, string contraseña){
-        int IDUsuario = -1;
+        int IDUsuario = 0;
         using (SqlConnection connection = new SqlConnection(connectionString)){
-        string query = "SELECT IDUsuario FROM Usuarios WHERE email = @email AND contraseña = @contraseña";
+        string query = "SELECT IDUsuario FROM Usuario WHERE email = @email AND contraseña = @contraseña";
         IDUsuario = connection.QueryFirstOrDefault<int>(query, new {email, contraseña});
         }         
         return IDUsuario;
@@ -19,7 +20,7 @@ public static class BD
     public static Usuario GetUsuario(int id){
         Usuario usuario = new Usuario();
         using (SqlConnection connection = new SqlConnection(connectionString)){
-        string query = "SELECT nombre, apellido, email, fechaNacimiento, foto FROM Usuarios WHERE IDUsuario = @id";
+        string query = "SELECT nombre, apellido, email, fechaNacimiento, foto FROM Usuario WHERE IDUsuario = @id";
         usuario = connection.QueryFirstOrDefault<Usuario>(query, new {id});
         }         
         return usuario;

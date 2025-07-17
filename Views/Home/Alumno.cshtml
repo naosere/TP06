@@ -1,7 +1,12 @@
-<img src= "../imagenes/ViewBag.foto">
-<h2>Nombre : @ViewBag.nombre </h2>
-<h2>Nombre : @ViewBag.apellido </h2>
-<h2>Nombre : @ViewBag.email </h2>
-<h2>Nombre : @ViewBag.fechaNacimiento </h2>
-<h2>Nombre : @ViewBag. </h2>
-<a href="@Url.Action"
+<body class = "Alum">
+<img src= "~/imagenes/@ViewBag.foto">
+<h2>Nombre: @ViewBag.nombre </h2>
+<h2>Apellido: @ViewBag.apellido </h2>
+<h2>Mail: @ViewBag.email </h2>
+<h2>Fecha de nacimiento: @ViewBag.fechaNacimiento </h2>
+<div class="contenedor">
+    <a class = "deslog" href='@Url.Action("Familiar","Home")'class="btn">FAMILIARES</a>
+    <a  class = "deslog" href='@Url.Action("Interes","Home")'class="btn">INTERESES</a>
+    <a class ="deslog" href='@Url.Action("Index","Home")'class="btn">SALIR DE SESIÓN</a>
+</div>
+</body>

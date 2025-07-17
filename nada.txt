@@ -1,0 +1,13 @@
+
+@foreach(DatoInteres dato in ViewBag.datosInteres){
+@switch(ViewBag.tipoInteres){
+    case '1': 
+};</h2>
+<h2>interes: @ViewBag.interes;</h2>
+<h2>interes: @Dato.interes;</h2>
+
+}
+<div class = "contenedor">
+<a class ="botonAlumno" href='@Url.Action("Alumno","Home")'class="btn">VOLVER AL ALUMNO</a>
+<a class ="deslog" href='@Url.Action("Index","Home")'class="btn">SALIR DE SESIÓN</a>
+</div>

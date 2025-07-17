@@ -25,10 +25,9 @@ public class DatoFamiliar
         this.parentesco = parentesco;
         this.descripcion = descripcion;
     }
-
-    public DatoFamiliar(){
+    public DatoFamiliar()
+    {
         
     }
-
 
 }

@@ -1,4 +1,15 @@
-nombre: @ViewBag.nombre;
-apellido: @ViewBag.apellido;
-parentesco: @ViewBag.parentesco;
-descripcion: @ViewBag.descripcion;
+<body class = "Alum">
+@foreach(DatoFamiliar dato in ViewBag.datosFamiliares) {
+<section class = "familiares">
+    <h2>Nombre: @dato.nombre</h2>
+    <h2>Apellido: @dato.apellido</h2>
+    <h2>Parentesco: @dato.parentesco</h2>
+    <h2>Descripcion: @dato.descripcion</h2>
+</section>
+}
+
+<div class = "contenedor">
+<a class ="botonAlumno" href='@Url.Action("Alumno","Home")'class="btn">VOLVER AL ALUMNO</a>
+<a class ="deslog" href='@Url.Action("Index","Home")'class="btn">SALIR DE SESIÓN</a>
+</div>
+</body>

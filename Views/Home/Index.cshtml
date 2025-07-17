@@ -1,9 +1,11 @@
-﻿<h1>BIENVENIDOS AL HIMALAYA</h1>
+﻿<body class = "Index">
+<h1>BIENVENIDOS AL HIMALAYA</h1>
     <form action='@Url.Action("Loguear","Home")' method="post">
-    Correo electronico: <input type="text" value = "email">
-    Contraseña: <input type="text" value= "contraseña">
-    <input type="submit" value = "Enviar">
+    <h2>Correo electronico:</h2> <p><input type="text" name = "email"></p>
+    <h2>Contraseña:</h2> <p><input type="password" name= "contraseña"></p>
+    <p><input type="submit" value = "Enviar"></p>
     </form>
         <h3>@ViewBag.MensajeError</h3>
+</body>
 
-        Apellido: @ViewBag.apellido
+

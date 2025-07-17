@@ -15,6 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        HttpContext.Session.Clear();
         return View();
     }
 
@@ -22,14 +23,14 @@ public class HomeController : Controller
     public IActionResult Loguear(string email, string contraseña){
         string devolver = "Index";
         int IDUsuario = BD.Login(email,contraseña);
-        if(IDUsuario != -1){
+        if(IDUsuario != 0){
             devolver = "Alumno";
             Usuario usuario = BD.GetUsuario(IDUsuario);
             HttpContext.Session.SetString("IDUsuario", IDUsuario.ToString()); 
             ViewBag.nombre = usuario.nombre;
             ViewBag.apellido = usuario.apellido;
             ViewBag.email = usuario.email;
-            ViewBag.fechaNacimiento = usuario.fechaNacimiento;
+            ViewBag.fechaNacimiento = ($"{usuario.fechaNacimiento.Day}/{usuario.fechaNacimiento.Month}/{usuario.fechaNacimiento.Year}");
             ViewBag.foto = usuario.foto;
         }
         else{
@@ -39,11 +40,28 @@ public class HomeController : Controller
     }
 
     public IActionResult Familiar (){
+        List<DatoFamiliar> datosFamiliares= new List<DatoFamiliar>();
+        datosFamiliares = BD.GetDatoFamiliar((int.Parse(HttpContext.Session.GetString("IDUsuario"))));
+        ViewBag.datosFamiliares = datosFamiliares;
         return View("DatoFamiliar");
     }
 
     public IActionResult Interes(){
+        List<DatoInteres> datosInteres= new List<DatoInteres>();
+        datosInteres = BD.GetDatoInteres((int.Parse(HttpContext.Session.GetString("IDUsuario"))));
+        ViewBag.datosInteres = datosInteres;
         return View("DatoInteres");
+    }
+
+    public IActionResult Alumno(){
+            Usuario usuario = BD.GetUsuario((int.Parse(HttpContext.Session.GetString("IDUsuario")))); 
+            ViewBag.nombre = usuario.nombre;
+            ViewBag.apellido = usuario.apellido;
+            ViewBag.email = usuario.email;
+            ViewBag.fechaNacimiento = ($"{usuario.fechaNacimiento.Day}/{usuario.fechaNacimiento.Month}/{usuario.fechaNacimiento.Year}");
+            ViewBag.foto = usuario.foto;
+
+        return View();
     }
 
 }

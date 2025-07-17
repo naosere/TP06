@@ -1,2 +1,28 @@
-<h2>tipoInteres:@ViewBag.tipoInteres;
-interes: @ViewBag.interes;
+<body class = "Alum">
+<div class = inter>
+@foreach(DatoInteres dato in ViewBag.datosInteres) {
+<section>
+    @{
+        string tipo = "";
+        switch (dato.tipoInteres)
+        {
+            case 1: tipo="Hobby";
+            break;
+            case 2: tipo = "Serie";
+            break;
+            case 3: tipo = "Amigo";
+            break;
+            case 4: tipo = "Gusto";
+            break;
+        }
+    }
+    <h2>@tipo: @dato.interes</h2>
+</section>
+}
+</div>
+
+<div class = "contenedor">
+<a class ="botonAlumno" href='@Url.Action("Alumno","Home")'class="btn">VOLVER AL ALUMNO</a>
+<a class ="deslog" href='@Url.Action("Index","Home")'class="btn">SALIR DE SESIÓN</a>
+</div>
+</body>
